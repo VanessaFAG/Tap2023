@@ -35,7 +35,6 @@ public class Loteria extends Stage {
     }
 
     private void CrearMazo() {
-        Image imgDorso = new Image(new File());
 
     }
 
@@ -50,7 +49,7 @@ public class Loteria extends Stage {
         vTablilla =new VBox(grdTablilla, hBtnSelec);
         vTablilla.setSpacing(20);
 
-        hPrincipal = new HBox(vTablilla, vMazo);
+        hPrincipal = new HBox(vTablilla);
         hPrincipal.setPadding(new Insets(20));
     }
 
