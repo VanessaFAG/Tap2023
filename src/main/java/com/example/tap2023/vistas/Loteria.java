@@ -20,7 +20,7 @@ public class Loteria extends Stage {
     private Scene escena;
     private HBox hPrincipal,hBtnSelec;
     private VBox vTablilla, vMazo;
-    private Image imgMazo;
+    private ImageView imvCarta;
     private Button[][] argBtnTablilla = new Button[4][4];
     private GridPane grdTablilla;
     private Button btnAnterior, btnSiguiente, btnInicio;
@@ -35,11 +35,17 @@ public class Loteria extends Stage {
     }
 
     private void CrearMazo() {
-
+        Image imgDorso = new Image(new File("src/main/java/com/example/tap2023/Imagenes/dorso.jpeg").toURI().toString());
+        imvCarta = new ImageView(imgDorso);
+        imvCarta.setFitWidth(200);
+        imvCarta.setFitHeight(300);
+        btnInicio = new Button("Iniciar");
+        vMazo = new VBox(imvCarta, btnInicio);
     }
 
     private void CrearUI() {
         CrearTablilla();
+        CrearMazo();
 
         btnAnterior = new Button("<");
         btnAnterior.setPrefSize(200,100);
@@ -49,8 +55,9 @@ public class Loteria extends Stage {
         vTablilla =new VBox(grdTablilla, hBtnSelec);
         vTablilla.setSpacing(20);
 
-        hPrincipal = new HBox(vTablilla);
+        hPrincipal = new HBox(vTablilla, vMazo);
         hPrincipal.setPadding(new Insets(20));
+
     }
 
     private void CrearTablilla() {
