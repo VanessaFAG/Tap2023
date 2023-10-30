@@ -18,13 +18,14 @@ public class Calculadora extends Stage {
             {"7", "4", "1", "0",
              "8", "5", "2", ".",
              "9", "6", "3", "+",
-             "/", "*", "-", "="};
+             "/", "x", "-", "="};
     double num1=0, num2=0, numR=0;
     String registroActual="0", operacionFinal="";
 
     public Calculadora() {
         CrearUI();
         escena = new Scene(vBox, 200, 200);
+        escena.getStylesheets().add(getClass().getResource("/estilos/Calculadora.css").toString());
         this.setTitle("Calculadora");
         this.setScene(escena);
         this.show();
@@ -189,7 +190,6 @@ public class Calculadora extends Stage {
                 break;
 
         }
-
         char ultimoSimbolo = expresion.charAt(longitud-1);
         switch(ultimoSimbolo) {
             case '+','-','x','/':

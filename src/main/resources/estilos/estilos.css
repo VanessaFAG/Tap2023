@@ -1,0 +1,20 @@
+.root{
+    -fx-background-image: url("https://images.wallpaperscraft.com/image/single/landscape_art_moon_127187_1920x1080.jpg") url("https://celaya.tecnm.mx/wp-content/uploads/2021/02/cropped-FAV.png");
+    -fx-background-repeat: no-repeat, no-repeat;
+    -fx-background-size: 100%, 150px;
+    -fx-background-position: center, left top;
+}
+
+.menu:hover{
+    -fx-background-color: silver;
+    -fx-font-weight: bold;
+}
+
+.label:hover{
+    -fx-text-fill: white;
+}
+
+.menu.item{
+    -fx-background-color: #808080;
+    -fx-border-color: #2f4f4f;
+}
